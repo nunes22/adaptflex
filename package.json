@@ -1,0 +1,44 @@
+{
+  "name": "@nunes22/adaptflex",
+  "version": "0.1.0-beta3",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w -ws _ ",
+    "clean": "bsb -clean-world",
+    "server": "moduleserve ./ --port 8000",
+    "test": "jest --watchAll"
+  },
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "Component Library",
+    "Design System",
+    "ReasonML",
+    "ReasonReact",
+    "BuckleScript"
+  ],
+  "author": "Ciro Nunes",
+  "license": "MIT",
+  "dependencies": {
+    "bs-css": "12.2.0",
+    "bs-css-emotion": "1.2.0",
+    "bs-webapi": "^0.15.8",
+    "re-classnames": "4.1.0"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.5.1",
+    "bs-platform": "7",
+    "bs-react-testing-library": "0.7.2",
+    "bsb-js": "^1.1.7",
+    "cross-fetch": "^3.0.4",
+    "moduleserve": "^0.9.0",
+    "reason-react": "0.7.1"
+  },
+  "peerDependencies": {
+    "reason-react": "0.7.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}

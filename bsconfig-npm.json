@@ -1,0 +1,25 @@
+{
+  "name": "@nunes22/adaptflex",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-react-testing-library"],
+  "bs-dependencies": ["reason-react", "bs-css", "re-classnames", "bs-webapi"],
+  "ppx-flags": [],
+  "refmt": 3
+}
