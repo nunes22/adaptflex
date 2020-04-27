@@ -58,7 +58,7 @@ function Toolbar(Props) {
                                         }));
                           }),
                         size: /* Small */0,
-                        variant: /* Ghost */2
+                        variant: /* Ghost */3
                       })
                 }));
 }

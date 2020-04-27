@@ -215,14 +215,20 @@ function spacingLargeBottom(theme) {
             ]);
 }
 
-function globalStyles(param) {
+function globalStyles(theme) {
   Curry._2(Css.$$global, "html, #app", /* :: */[
         Css.height(Css.pct(100)),
         /* [] */0
       ]);
   Curry._2(Css.$$global, "body", /* :: */[
-        Css.height(Css.pct(100)),
-        noSpacing
+        Css.fontFamily(/* `custom */[
+              1066567601,
+              theme.typography.fontFamily
+            ]),
+        /* :: */[
+          Css.height(Css.pct(100)),
+          noSpacing
+        ]
       ]);
   Curry._2(Css.$$global, "input", noSpacing);
   Curry._2(Css.$$global, "h1,h2,h3,h4,h5,h6", /* :: */[
@@ -371,33 +377,39 @@ function buttonStyles(theme, variant, size) {
         tmp = Css.padding2(Css.px(theme.spacing.small), Css.px(theme.spacing.small + 9 | 0));
         break;
     case /* Medium */1 :
-        tmp = Css.padding(Css.px(theme.spacing.medium));
+        tmp = Css.padding2(Css.px(theme.spacing.small + 9 | 0), Css.px(theme.spacing.medium));
         break;
     case /* Large */2 :
-        tmp = Css.padding(Css.px(theme.spacing.large));
+        tmp = Css.padding2(Css.px(theme.spacing.small + 9 | 0), Css.px(theme.spacing.large));
         break;
     
   }
   var baseStyles = Curry._1(Css.style, /* :: */[
-        Css.cursor(/* pointer */-786317123),
+        Css.display(Css.inlineBlock),
         /* :: */[
-          Css.transition(3, undefined, Css.linear, "all"),
+          Css.cursor(/* pointer */-786317123),
           /* :: */[
-            Css.fontFamily(/* `custom */[
-                  1066567601,
-                  theme.typography.fontFamily
-                ]),
+            Css.transition(3, undefined, Css.linear, "all"),
             /* :: */[
-              Css.fontSize(Css.px(theme.typography.medium)),
+              Css.fontFamily(/* `custom */[
+                    1066567601,
+                    theme.typography.fontFamily
+                  ]),
               /* :: */[
-                Css.borderRadius(theme.borders.borderRadius),
+                Css.fontSize(Css.px(theme.typography.medium)),
                 /* :: */[
-                  Css.fontWeight(Css.bold),
+                  Css.borderRadius(theme.borders.borderRadius),
                   /* :: */[
-                    Css.transition(330, undefined, Css.cubicBezier(0.18, 0.8, 0.44, 1.0), "all"),
+                    Css.fontWeight(Css.bold),
                     /* :: */[
-                      tmp,
-                      /* [] */0
+                      Css.textDecoration(Css.none),
+                      /* :: */[
+                        Css.transition(330, undefined, Css.cubicBezier(0.18, 0.8, 0.44, 1.0), "all"),
+                        /* :: */[
+                          tmp,
+                          /* [] */0
+                        ]
+                      ]
                     ]
                   ]
                 ]
@@ -441,14 +453,11 @@ function buttonStyles(theme, variant, size) {
                               /* :: */[
                                 Css.border(Css.px(1), Css.solid, Css.hex(theme.colors.primary)),
                                 /* :: */[
-                                  Css.padding(Css.px(theme.spacing.medium)),
-                                  /* :: */[
-                                    Css.hover(/* :: */[
-                                          Css.backgroundColor(Css.hex(theme.colors.primaryLight)),
-                                          /* [] */0
-                                        ]),
-                                    /* [] */0
-                                  ]
+                                  Css.hover(/* :: */[
+                                        Css.backgroundColor(Css.hex(theme.colors.primaryLight)),
+                                        /* [] */0
+                                      ]),
+                                  /* [] */0
                                 ]
                               ]
                             ]
@@ -456,7 +465,30 @@ function buttonStyles(theme, variant, size) {
                       /* [] */0
                     ]
                   ]);
-    case /* Ghost */2 :
+    case /* Secondary */2 :
+        return Curry._1(Css.merge, /* :: */[
+                    baseStyles,
+                    /* :: */[
+                      Curry._1(Css.style, /* :: */[
+                            Css.backgroundColor(Css.hex("333")),
+                            /* :: */[
+                              Css.color(Css.hex(theme.colors.white)),
+                              /* :: */[
+                                Css.border(Css.px(1), Css.solid, Css.hex("333")),
+                                /* :: */[
+                                  Css.hover(/* :: */[
+                                        Css.backgroundColor(Css.hex("555")),
+                                        /* [] */0
+                                      ]),
+                                  /* [] */0
+                                ]
+                              ]
+                            ]
+                          ]),
+                      /* [] */0
+                    ]
+                  ]);
+    case /* Ghost */3 :
         return Curry._1(Css.merge, /* :: */[
                     baseStyles,
                     /* :: */[
@@ -473,6 +505,32 @@ function buttonStyles(theme, variant, size) {
                                       ]
                                     ]),
                                 /* [] */0
+                              ]
+                            ]
+                          ]),
+                      /* [] */0
+                    ]
+                  ]);
+    case /* Link */4 :
+        return Curry._1(Css.merge, /* :: */[
+                    baseStyles,
+                    /* :: */[
+                      Curry._1(Css.style, /* :: */[
+                            Css.padding(Css.zero),
+                            /* :: */[
+                              Css.fontWeight(Css.normal),
+                              /* :: */[
+                                Css.backgroundColor(Css.hex("transparent")),
+                                /* :: */[
+                                  Css.color(Css.hex(theme.colors.primary)),
+                                  /* :: */[
+                                    Css.hover(/* :: */[
+                                          Css.color(Css.hex(theme.colors.primaryDark)),
+                                          /* [] */0
+                                        ]),
+                                    /* [] */0
+                                  ]
+                                ]
                               ]
                             ]
                           ]),

@@ -2,7 +2,7 @@ module.exports = {
   title: "adaptflex",
   tagline: "The adaptive ReasonReact Design System",
   url: "https://nunes22.github.com/adaptflex",
-  baseUrl: "/",
+  baseUrl: "/adaptflex/",
   favicon: "img/favicon.ico",
   organizationName: "nunes22", // Usually your GitHub org/user name.
   projectName: "adaptflex", // Usually your repo name.
@@ -15,7 +15,7 @@ module.exports = {
       // },
       links: [
         {
-          to: "docs/doc1",
+          to: "docs/what-why",
           activeBasePath: "docs",
           label: "Docs",
           position: "left",
@@ -35,8 +35,8 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/doc1",
+              label: "What & Why",
+              to: "docs/what-why",
             },
             {
               label: "Second Doc",

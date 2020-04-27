@@ -3,8 +3,8 @@ module Styles = {
   let container =
     style([
       display(inlineFlex),
-      selector("> div", [paddingRight(px(12))]),
-      selector("> div:last-child", [paddingRight(px(0))]),
+      selector("> *", [marginRight(px(12))]),
+      selector("> *:last-child", [marginRight(px(0))]),
     ]);
 };
 [@react.component]

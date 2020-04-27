@@ -185,9 +185,9 @@ let spacingLargeBottom = theme =>
 
 // Global/Container
 // ----------------------------------------
-let globalStyles = () => {
+let globalStyles = theme => {
   global("html, #app", [height(pct(100.))]);
-  global("body", [height(pct(100.)), ...noSpacing]);
+  global("body", [fontFamily(`custom(theme.typography.fontFamily)), height(pct(100.)), ...noSpacing]);
   global("input", noSpacing);
   global("h1,h2,h3,h4,h5,h6", [lineHeight(`abs(1.)), ...noSpacing]);
   global(
@@ -303,17 +303,21 @@ let inputStyles = theme =>
 type buttonVariant =
   | Default
   | Primary
-  | Ghost;
+  | Secondary
+  | Ghost
+  | Link;
 
 let buttonStyles = (~theme, ~variant: buttonVariant, ~size) => {
   let baseStyles =
     style([
+      display(inlineBlock),
       cursor(`pointer),
       transition(~duration=3, ~timingFunction=linear, "all"),
       fontFamily(`custom(theme.typography.fontFamily)),
       fontSize(px(theme.typography.medium)),
       borderRadius(theme.borders.borderRadius),
       fontWeight(bold),
+      textDecoration(none),
       transition(
         ~duration=330,
         ~timingFunction=cubicBezier(0.18, 0.8, 0.44, 1.0),
@@ -322,12 +326,38 @@ let buttonStyles = (~theme, ~variant: buttonVariant, ~size) => {
       switch (size) {
       | Small =>
         padding2(~h=px(theme.spacing.small + 9), ~v=px(theme.spacing.small))
-      | Medium => padding(px(theme.spacing.medium))
-      | Large => padding(px(theme.spacing.large))
+      | Medium =>
+        padding2(
+          ~v=px(theme.spacing.small + 9),
+          ~h=px(theme.spacing.medium),
+        )
+      | Large =>
+        padding2(~v=px(theme.spacing.small + 9), ~h=px(theme.spacing.large))
       },
     ]);
 
   switch (variant) {
+  | Link =>
+    merge([
+      baseStyles,
+      style([
+        padding(zero),
+        fontWeight(normal),
+        backgroundColor(hex("transparent")),
+        color(hex(theme.colors.primary)),
+        hover([color(hex(theme.colors.primaryDark))]),
+      ]),
+    ])
+  | Secondary =>
+    merge([
+      baseStyles,
+      style([
+        backgroundColor(hex("333")),
+        color(hex(theme.colors.white)),
+        border(px(1), solid, hex("333")),
+        hover([backgroundColor(hex("555"))]),
+      ]),
+    ])
   | Ghost =>
     merge([
       baseStyles,
@@ -335,8 +365,8 @@ let buttonStyles = (~theme, ~variant: buttonVariant, ~size) => {
         backgroundColor(transparent),
         border(px(1), solid, transparent),
         hover([
-          borderColor(Css.hex(theme.colors.bodyBackground)),
-          backgroundColor(Css.hex(theme.colors.bodyBackground)),
+          borderColor(hex(theme.colors.bodyBackground)),
+          backgroundColor(hex(theme.colors.bodyBackground)),
         ]),
       ]),
     ])
@@ -344,21 +374,20 @@ let buttonStyles = (~theme, ~variant: buttonVariant, ~size) => {
     merge([
       baseStyles,
       style([
-        backgroundColor(Css.hex(theme.colors.cardBackground)),
-        color(Css.hex(theme.colors.bodyText)),
-        border(px(1), solid, Css.hex(theme.colors.bodyBackground)),
-        hover([backgroundColor(Css.hex(theme.colors.bodyBackground))]),
+        backgroundColor(hex(theme.colors.cardBackground)),
+        color(hex(theme.colors.bodyText)),
+        border(px(1), solid, hex(theme.colors.bodyBackground)),
+        hover([backgroundColor(hex(theme.colors.bodyBackground))]),
       ]),
     ])
   | Primary =>
     merge([
       baseStyles,
       style([
-        backgroundColor(Css.hex(theme.colors.primary)),
-        color(Css.hex(theme.colors.white)),
-        border(px(1), solid, Css.hex(theme.colors.primary)),
-        padding(px(theme.spacing.medium)),
-        hover([backgroundColor(Css.hex(theme.colors.primaryLight))]),
+        backgroundColor(hex(theme.colors.primary)),
+        color(hex(theme.colors.white)),
+        border(px(1), solid, hex(theme.colors.primary)),
+        hover([backgroundColor(hex(theme.colors.primaryLight))]),
       ]),
     ])
   };

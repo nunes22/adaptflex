@@ -7,13 +7,13 @@ var React = require("react");
 var container = Curry._1(Css.style, /* :: */[
       Css.display(Css.inlineFlex),
       /* :: */[
-        Css.selector("> div", /* :: */[
-              Css.paddingRight(Css.px(12)),
+        Css.selector("> *", /* :: */[
+              Css.marginRight(Css.px(12)),
               /* [] */0
             ]),
         /* :: */[
-          Css.selector("> div:last-child", /* :: */[
-                Css.paddingRight(Css.px(0)),
+          Css.selector("> *:last-child", /* :: */[
+                Css.marginRight(Css.px(0)),
                 /* [] */0
               ]),
           /* [] */0
