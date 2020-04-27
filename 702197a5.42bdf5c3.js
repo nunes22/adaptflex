@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{112:function(a){a.exports=JSON.parse('{"allTagsPath":"/adaptflex/blog/tags","slug":"adaptflex","name":"adaptflex","count":2,"permalink":"/adaptflex/blog/tags/adaptflex"}')}}]);
