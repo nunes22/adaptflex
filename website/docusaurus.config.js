@@ -9,10 +9,10 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: "adaptflex",
-      // logo: {
-      //   alt: "My Site Logo",
-      //   src: "img/logo.svg",
-      // },
+      logo: {
+        alt: "Adaptflex logo",
+        src: "img/logo-adaptflex.svg",
+      },
       links: [
         {
           to: "docs/what-why",

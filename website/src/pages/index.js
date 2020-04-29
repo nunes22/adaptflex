@@ -8,7 +8,7 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: <>Easy to Use</>,
+    title: <>Adaptive</>,
     imageUrl: "img/undraw_docusaurus_mountain.svg",
     description: (
       <>
@@ -18,7 +18,7 @@ const features = [
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>Flexible</>,
     imageUrl: "img/undraw_docusaurus_tree.svg",
     description: (
       <>
@@ -28,7 +28,7 @@ const features = [
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>Easy to use</>,
     imageUrl: "img/undraw_docusaurus_react.svg",
     description: (
       <>

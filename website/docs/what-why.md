@@ -4,6 +4,10 @@ title: What & Why
 sidebar_label: What & Why
 ---
 
+Adaptflex is an adaptive Design System for [ReasonReact](https://reasonml.github.io/reason-react) and [React](https://reactjs.org).
+
+It has a set of themes that you can use or easily create new ones for your projects.
+
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
 
 ## Markdown Syntax

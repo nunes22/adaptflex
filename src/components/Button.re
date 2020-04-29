@@ -1,3 +1,7 @@
+/**
+  The Infinity Stone type is the most powerful type in the Universe. Very few
+  can wield its powers!
+  */
 [@react.component]
 let make =
     (

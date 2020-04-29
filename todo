@@ -1,3 +1,6 @@
+- [] Visual Testing: Integrate Percy
+- [] Documentation: Integrate Storybook
+
 - [] Documentation
   - [] What & Why?
   - [] Getting started
@@ -8,9 +11,29 @@
   - Flow
 
 - [] Components
+  - [] Link
+  - [] Navigation
+  - [] Menu
+  - [] Icon
+  - [] Breadcrumbs
   - [] FormControl
+  - [] Box
   - [] Card
     - Remove fullScreen prop?
+  - [] OffCanvas
+  - [] Tooltip
+  - [] Tabs
+  - [] Radio
+  - [] Select
+  - [] ExpansionPanel
+  - [] Dialog
+  - [] Toaster
+  - [] Table
+  - [] List
+  - [] Grid
+  - [] TextField
+    - `input` or `textarea`
+
 
 - [] CI: GitHub Workflows
   - Build
@@ -23,6 +46,4 @@
   - [] Next.js
   - [] Gatsby
   
-- [] Documentation: Integrate Storybook
 - [] Design Tool: Integrate Playroom
-- [] Visual Testing: Integrate Percy

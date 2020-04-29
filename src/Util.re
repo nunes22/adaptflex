@@ -12,4 +12,7 @@ module Testing = {
   };
 };
 
+/**
+  This is a sample function that is being documented.
+  */
 let getNextId = () => Js.Date.make() |> Js.Date.getTime |> int_of_float;

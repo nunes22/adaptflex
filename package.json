@@ -6,7 +6,8 @@
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
     "server": "moduleserve ./ --port 8000",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "doc": "bsdoc build Adaptflex"
   },
   "files": [
     "src",
@@ -32,13 +33,14 @@
     "bs-platform": "7",
     "bs-react-testing-library": "0.7.2",
     "bsb-js": "^1.1.7",
+    "bsdoc": "6.0.1-alpha",
     "cross-fetch": "^3.0.4",
     "moduleserve": "^0.9.0",
     "reason-react": "0.7.1"
   },
   "peerDependencies": {
-    "reason-react": "0.7.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "reason-react": "0.7.1"
   }
 }
