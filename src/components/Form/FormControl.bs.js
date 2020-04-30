@@ -1,10 +1,10 @@
-'use strict';
 
-var Css = require("bs-css-emotion/src/Css.js");
-var Curry = require("bs-platform/lib/js/curry.js");
-var React = require("react");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
-var Input$Nunes22Adaptflex = require("./Input.bs.js");
+
+import * as Css from "../../../node_modules/bs-css-emotion/src/Css.js";
+import * as Curry from "../../../node_modules/bs-platform/lib/es6/curry.js";
+import * as React from "react";
+import * as Caml_option from "../../../node_modules/bs-platform/lib/es6/caml_option.js";
+import * as Input$Nunes22Adaptflex from "../Input.bs.js";
 
 var container = Curry._1(Css.style, /* :: */[
       Css.marginBottom(Css.px(24)),
@@ -45,6 +45,9 @@ function FormControl(Props) {
 
 var make = FormControl;
 
-exports.Styles = Styles;
-exports.make = make;
+export {
+  Styles ,
+  make ,
+  
+}
 /* container Not a pure module */

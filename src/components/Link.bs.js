@@ -1,8 +1,8 @@
-'use strict';
 
-var React = require("react");
-var Theme$Nunes22Adaptflex = require("../theme/Theme.bs.js");
-var ThemeContext$Nunes22Adaptflex = require("../theme/ThemeContext.bs.js");
+
+import * as React from "react";
+import * as Theme$Nunes22Adaptflex from "../theme/Theme.bs.js";
+import * as ThemeContext$Nunes22Adaptflex from "../theme/ThemeContext.bs.js";
 
 function Link(Props) {
   var children = Props.children;
@@ -21,5 +21,8 @@ function Link(Props) {
 
 var make = Link;
 
-exports.make = make;
+export {
+  make ,
+  
+}
 /* react Not a pure module */

@@ -1,13 +1,15 @@
 {
   "name": "@nunes22/adaptflex",
-  "version": "0.1.0-beta3",
+  "version": "0.1.0-beta5",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
     "server": "moduleserve ./ --port 8000",
     "test": "jest --watchAll",
-    "doc": "bsdoc build Adaptflex"
+    "doc": "bsdoc build Adaptflex",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "src",
@@ -26,10 +28,17 @@
     "bs-css": "12.2.0",
     "bs-css-emotion": "1.2.0",
     "bs-webapi": "^0.15.8",
-    "re-classnames": "4.1.0"
+    "re-classnames": "4.1.0",
+    "bs-storybook": "1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
     "@glennsl/bs-jest": "0.5.1",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
     "bs-platform": "7",
     "bs-react-testing-library": "0.7.2",
     "bsb-js": "^1.1.7",

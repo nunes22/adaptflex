@@ -1,8 +1,8 @@
-'use strict';
 
-var Css = require("bs-css-emotion/src/Css.js");
-var Curry = require("bs-platform/lib/js/curry.js");
-var React = require("react");
+
+import * as Css from "../../node_modules/bs-css-emotion/src/Css.js";
+import * as Curry from "../../node_modules/bs-platform/lib/es6/curry.js";
+import * as React from "react";
 
 var container = Curry._1(Css.style, /* :: */[
       Css.display(Css.inlineFlex),
@@ -34,6 +34,9 @@ function Inline(Props) {
 
 var make = Inline;
 
-exports.Styles = Styles;
-exports.make = make;
+export {
+  Styles ,
+  make ,
+  
+}
 /* container Not a pure module */

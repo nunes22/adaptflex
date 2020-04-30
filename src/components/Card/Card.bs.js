@@ -1,11 +1,11 @@
-'use strict';
 
-var Cn = require("re-classnames/src/Cn.bs.js");
-var Css = require("bs-css-emotion/src/Css.js");
-var Curry = require("bs-platform/lib/js/curry.js");
-var React = require("react");
-var Theme$Nunes22Adaptflex = require("../theme/Theme.bs.js");
-var ThemeContext$Nunes22Adaptflex = require("../theme/ThemeContext.bs.js");
+
+import * as Cn from "../../../node_modules/re-classnames/src/Cn.bs.js";
+import * as Css from "../../../node_modules/bs-css-emotion/src/Css.js";
+import * as Curry from "../../../node_modules/bs-platform/lib/es6/curry.js";
+import * as React from "react";
+import * as Theme$Nunes22Adaptflex from "../../theme/Theme.bs.js";
+import * as ThemeContext$Nunes22Adaptflex from "../../theme/ThemeContext.bs.js";
 
 var card = Curry._1(Css.style, /* :: */[
       Css.top(Css.px(100)),
@@ -42,6 +42,9 @@ function Card(Props) {
 
 var make = Card;
 
-exports.Styles = Styles;
-exports.make = make;
+export {
+  Styles ,
+  make ,
+  
+}
 /* card Not a pure module */

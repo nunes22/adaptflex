@@ -1,6 +1,6 @@
-'use strict';
 
-var React = require("react");
+
+import * as React from "react";
 
 function Typography$H1(Props) {
   var children = Props.children;
@@ -11,5 +11,8 @@ var H1 = {
   make: Typography$H1
 };
 
-exports.H1 = H1;
+export {
+  H1 ,
+  
+}
 /* react Not a pure module */

@@ -7,12 +7,16 @@
     {
       "dir": "src",
       "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev"
     }
   ],
   "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
   "package-specs": [
     {
-      "module": "commonjs",
+      "module": "es6-global",
       "in-source": true
     }
   ],
@@ -24,7 +28,8 @@
     "bs-css",
     "bs-css-emotion",
     "re-classnames",
-    "bs-webapi"
+    "bs-webapi",
+    "bs-storybook"
   ],
   "ppx-flags": [],
   "refmt": 3

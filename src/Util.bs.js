@@ -1,6 +1,6 @@
-'use strict';
 
-var React = require("react");
+
+import * as React from "react";
 
 function Util$WithTestId(Props) {
   var id = Props.id;
@@ -30,7 +30,10 @@ function getNextId(param) {
   return new Date().getTime() | 0;
 }
 
-exports.WithTestId = WithTestId;
-exports.Testing = Testing;
-exports.getNextId = getNextId;
+export {
+  WithTestId ,
+  Testing ,
+  getNextId ,
+  
+}
 /* react Not a pure module */

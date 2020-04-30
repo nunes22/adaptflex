@@ -1,7 +1,7 @@
-'use strict';
 
-var React = require("react");
-var Theme$Nunes22Adaptflex = require("./Theme.bs.js");
+
+import * as React from "react";
+import * as Theme$Nunes22Adaptflex from "./Theme.bs.js";
 
 var themeContext = React.createContext(Theme$Nunes22Adaptflex.$$default);
 
@@ -14,7 +14,10 @@ function makeProps(value, children, param) {
 
 var make = themeContext.Provider;
 
-exports.themeContext = themeContext;
-exports.makeProps = makeProps;
-exports.make = make;
+export {
+  themeContext ,
+  makeProps ,
+  make ,
+  
+}
 /* themeContext Not a pure module */

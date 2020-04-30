@@ -1,11 +1,11 @@
-'use strict';
 
-var Cn = require("re-classnames/src/Cn.bs.js");
-var React = require("react");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
-var Util$Nunes22Adaptflex = require("../Util.bs.js");
-var Theme$Nunes22Adaptflex = require("../theme/Theme.bs.js");
-var ThemeContext$Nunes22Adaptflex = require("../theme/ThemeContext.bs.js");
+
+import * as Cn from "../../node_modules/re-classnames/src/Cn.bs.js";
+import * as React from "react";
+import * as Caml_option from "../../node_modules/bs-platform/lib/es6/caml_option.js";
+import * as Util$Nunes22Adaptflex from "../Util.bs.js";
+import * as Theme$Nunes22Adaptflex from "../theme/Theme.bs.js";
+import * as ThemeContext$Nunes22Adaptflex from "../theme/ThemeContext.bs.js";
 
 function Input(Props) {
   var type_ = Props.type_;
@@ -48,5 +48,8 @@ function Input(Props) {
 
 var make = Input;
 
-exports.make = make;
+export {
+  make ,
+  
+}
 /* react Not a pure module */

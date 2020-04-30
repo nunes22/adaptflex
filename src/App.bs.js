@@ -1,12 +1,12 @@
-'use strict';
 
-var React = require("react");
-var Card$Nunes22Adaptflex = require("./components/Card.bs.js");
-var Input$Nunes22Adaptflex = require("./components/Input.bs.js");
-var Theme$Nunes22Adaptflex = require("./theme/Theme.bs.js");
-var Button$Nunes22Adaptflex = require("./components/Button.bs.js");
-var Inline$Nunes22Adaptflex = require("./components/Inline.bs.js");
-var Typography$Nunes22Adaptflex = require("./components/Typography.bs.js");
+
+import * as React from "react";
+import * as Card$Nunes22Adaptflex from "./components/Card/Card.bs.js";
+import * as Input$Nunes22Adaptflex from "./components/Input.bs.js";
+import * as Theme$Nunes22Adaptflex from "./theme/Theme.bs.js";
+import * as Button$Nunes22Adaptflex from "./components/Button/Button.bs.js";
+import * as Inline$Nunes22Adaptflex from "./components/Inline.bs.js";
+import * as Typography$Nunes22Adaptflex from "./components/Typography.bs.js";
 
 Theme$Nunes22Adaptflex.globalStyles(Theme$Nunes22Adaptflex.$$default);
 
@@ -73,6 +73,9 @@ function App(Props) {
 
 var make = App;
 
-exports.Styles = Styles;
-exports.make = make;
+export {
+  Styles ,
+  make ,
+  
+}
 /*  Not a pure module */

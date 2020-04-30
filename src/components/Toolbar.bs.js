@@ -1,12 +1,12 @@
-'use strict';
 
-var Css = require("bs-css-emotion/src/Css.js");
-var Curry = require("bs-platform/lib/js/curry.js");
-var React = require("react");
-var Theme$Nunes22Adaptflex = require("../theme/Theme.bs.js");
-var Button$Nunes22Adaptflex = require("./Button.bs.js");
-var OffCanvas$Nunes22Adaptflex = require("./OffCanvas.bs.js");
-var ThemeContext$Nunes22Adaptflex = require("../theme/ThemeContext.bs.js");
+
+import * as Css from "../../node_modules/bs-css-emotion/src/Css.js";
+import * as Curry from "../../node_modules/bs-platform/lib/es6/curry.js";
+import * as React from "react";
+import * as Theme$Nunes22Adaptflex from "../theme/Theme.bs.js";
+import * as Button$Nunes22Adaptflex from "./Button/Button.bs.js";
+import * as OffCanvas$Nunes22Adaptflex from "./OffCanvas.bs.js";
+import * as ThemeContext$Nunes22Adaptflex from "../theme/ThemeContext.bs.js";
 
 function Toolbar(Props) {
   var title = Props.title;
@@ -65,5 +65,8 @@ function Toolbar(Props) {
 
 var make = Toolbar;
 
-exports.make = make;
+export {
+  make ,
+  
+}
 /* Css Not a pure module */
