@@ -215,20 +215,14 @@ function spacingLargeBottom(theme) {
             ]);
 }
 
-function globalStyles(theme) {
+function globalStyles(param) {
   Curry._2(Css.$$global, "html, #app", /* :: */[
         Css.height(Css.pct(100)),
         /* [] */0
       ]);
   Curry._2(Css.$$global, "body", /* :: */[
-        Css.fontFamily(/* `custom */[
-              1066567601,
-              theme.typography.fontFamily
-            ]),
-        /* :: */[
-          Css.height(Css.pct(100)),
-          noSpacing
-        ]
+        Css.height(Css.pct(100)),
+        noSpacing
       ]);
   Curry._2(Css.$$global, "input", noSpacing);
   Curry._2(Css.$$global, "h1,h2,h3,h4,h5,h6", /* :: */[

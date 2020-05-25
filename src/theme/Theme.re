@@ -185,9 +185,9 @@ let spacingLargeBottom = theme =>
 
 // Global/Container
 // ----------------------------------------
-let globalStyles = theme => {
+let globalStyles = () => {
   global("html, #app", [height(pct(100.))]);
-  global("body", [fontFamily(`custom(theme.typography.fontFamily)), height(pct(100.)), ...noSpacing]);
+  global("body", [height(pct(100.)), ...noSpacing]);
   global("input", noSpacing);
   global("h1,h2,h3,h4,h5,h6", [lineHeight(`abs(1.)), ...noSpacing]);
   global(
