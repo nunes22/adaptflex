@@ -1,5 +1,5 @@
 module Styles = {
-  Theme.globalStyles(Theme.default);
+  Theme.globalStyles();
 };
 
 [@react.component]

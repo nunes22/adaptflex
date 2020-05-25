@@ -8,7 +8,7 @@ import * as Button$Nunes22Adaptflex from "./components/Button/Button.bs.js";
 import * as Inline$Nunes22Adaptflex from "./components/Inline.bs.js";
 import * as Typography$Nunes22Adaptflex from "./components/Typography.bs.js";
 
-Theme$Nunes22Adaptflex.globalStyles(Theme$Nunes22Adaptflex.$$default);
+Theme$Nunes22Adaptflex.globalStyles(/* () */0);
 
 var Styles = { };
 
