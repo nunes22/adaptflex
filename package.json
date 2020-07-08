@@ -5,7 +5,6 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
-    "server": "moduleserve ./ --port 8000",
     "test": "jest --watchAll",
     "doc": "bsdoc build Adaptflex",
     "storybook": "start-storybook -p 6006",
@@ -27,9 +26,9 @@
   "dependencies": {
     "bs-css": "12.2.0",
     "bs-css-emotion": "1.2.0",
+    "bs-storybook": "1.0.0",
     "bs-webapi": "^0.15.8",
-    "re-classnames": "4.1.0",
-    "bs-storybook": "1.0.0"
+    "re-classnames": "4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -44,12 +43,11 @@
     "bsb-js": "^1.1.7",
     "bsdoc": "6.0.1-alpha",
     "cross-fetch": "^3.0.4",
-    "moduleserve": "^0.9.0",
-    "reason-react": "0.7.1"
+    "reason-react": "0.8.0"
   },
   "peerDependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "reason-react": "0.7.1"
+    "reason-react": "0.8.0"
   }
 }
