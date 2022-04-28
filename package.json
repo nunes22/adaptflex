@@ -43,7 +43,7 @@
     "bs-react-testing-library": "0.7.2",
     "bsb-js": "^1.1.7",
     "bsdoc": "6.0.1-alpha",
-    "cross-fetch": "^3.0.4",
+    "cross-fetch": "^3.1.5",
     "moduleserve": "^0.9.0",
     "reason-react": "0.7.1"
   },
